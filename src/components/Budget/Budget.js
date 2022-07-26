@@ -19,7 +19,7 @@ const Budget = ({ budget, index }) => {
           <a href=''>{budget.from}</a>
         </td>
         <td>
-          <Link to={`/budget/${index}`}></Link>
+          <Link to={`/budgets/${index}`}>✏️</Link>
         </td>
       </tr>
   

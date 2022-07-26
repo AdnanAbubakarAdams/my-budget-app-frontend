@@ -19,9 +19,22 @@ const Budgets = () => {
       });
   },[]);
 
+  const calculateBalance = budgets.map((budget) => Number(budget.amount))
+  let sum = 0;
+  calculateBalance.forEach((amount) => {
+    sum += amount;
+    return sum;
+  });
+  let figColor = "black";
+  if (sum < 0) {
+    figColor = "red";
+  } else {
+    figColor = "green";
+  }
+
   return (
     <div className="Budgets">
-      <h2> Bank Account Total: </h2>
+      <h2> Bank Account Total: <span className={figColor}>${sum}</span></h2>
       <section>
         <table>
           <thead>

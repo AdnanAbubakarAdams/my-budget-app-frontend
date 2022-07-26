@@ -13,7 +13,7 @@ const EditBudget = () => {
   const [budget, setBudget] = useState({
     date: "",
     item_name: "",
-    amount: "", 
+    amount: 0, 
     from: "",
     category: ""
   });
@@ -23,7 +23,7 @@ const EditBudget = () => {
   };
 
   useEffect(() => {
-    axios.get(`${API}/budget/${index}`)
+    axios.get(`${API}/budgets/${index}`)
     .then((res) => {
       setBudget(res.data)
     })
@@ -50,6 +50,7 @@ const EditBudget = () => {
       <form onSubmit={handleSubmit}>
         <label >
           Date 
+          <br/>
           <input 
           id='date' 
           type="text" 
@@ -58,18 +59,24 @@ const EditBudget = () => {
           onChange={handleChange}
           />
         </label>
+        <br/>
+
         <label >
           Name
+          <br/>
           <input 
-          id='name' 
+          id='item_name' 
           type="text" 
           placeholder="Name" 
           value={budget.item_name}
           onChange={handleChange}
           />
         </label>
+        <br/>
+
         <label >
           Amount
+          <br/>
           <input 
           id='amount' 
           type="number" 
@@ -78,8 +85,11 @@ const EditBudget = () => {
           onChange={handleChange}
           />
         </label>
+        <br/>
+
         <label >
           From 
+          <br/>
           <input 
           id='from' 
           type="text" 
@@ -90,10 +100,12 @@ const EditBudget = () => {
         </label>
         <br />
         
-        <input type="submit" value=" CREATE NEW ITEM " />
+        <input type="submit" value=" UPDATE TRANSACTION " />
 
       </form>
-      <Link to={`budgets/${index}`}></Link>
+      <Link to={`budgets/new${index}`}>
+        <button>CREATE NEW ITEM</button>
+      </Link>
 
     </div>
   )
