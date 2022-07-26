@@ -15,3 +15,8 @@ table {
   tbody tr:nth-child(even) {
     background: #f4eafd;
   }
+
+  a {
+    text-decoration: none;
+    color: #4442a5;
+  }

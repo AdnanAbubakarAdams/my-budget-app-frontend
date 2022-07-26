@@ -11,7 +11,7 @@ function App() {
         <Navbar />
         <main>
           <Routes>
-            <Route path="/budgets" element={<Budgets/>}/>
+            <Route path="/budgets" element={<Budgets />} />
 
           </Routes>
         </main>

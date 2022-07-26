@@ -3,7 +3,7 @@ import Budget from "../Budget/Budget";
 import "./Budgets.css";
 import axios from "axios";
 
-const API = process.env.REACT_APP_URL;
+const API = process.env.REACT_APP_API_URL;
 
 const Budgets = () => {
   const [budgets, setBudgets] = useState([]);
@@ -17,7 +17,7 @@ const Budgets = () => {
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+  },[]);
 
   return (
     <div className="Budgets">
@@ -26,9 +26,11 @@ const Budgets = () => {
         <table>
           <thead>
             <tr>
-              <th> Date </th>
-              <th> Transactions </th>
-              <th> Amount </th>
+              {/* <th></th> */}
+              <th>Date</th>
+              <th>Transactions</th>
+              <th>Amount</th>
+              <th>From</th>
             </tr>
           </thead>
           <tbody>
