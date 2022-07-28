@@ -6,13 +6,13 @@ const Navbar = () => {
   return (
     <nav className='nav-bar'>
       <h1>
-        <Link to="/budgets">AddyBank</Link>
+        <Link className="link" to="/">AddyBudget</Link>
       </h1>
       <h1>
-        <Link to="/budgets">Transactions</Link>
+        <Link className="link" to="/budgets">Transactions</Link>
       </h1>
       <h1>
-        <Link to="/budgets/new">New Transaction</Link>
+        <Link className="link" to="/budgets/new">New Transaction</Link>
       </h1>
     </nav>
   )

@@ -1,5 +1,5 @@
 import React,{ useState, useEffect } from 'react';
-import { useParams, Link, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from 'axios';
 import "./EditBudget.css";
 
@@ -19,8 +19,13 @@ const EditBudget = () => {
   });
 
   const handleChange = (e) => {
-    setBudget({ ...budget, [e.target.id] : e.target.value })
+    e.preventDefault()
+    setBudget(e.target.value )
   };
+
+  const handleSelect = (e) => {
+    setBudget({...budget, [e.target.id] : e.target.value})
+  }
 
   useEffect(() => {
     axios.get(`${API}/budgets/${index}`)
@@ -99,13 +104,20 @@ const EditBudget = () => {
           />
         </label>
         <br />
-        
+        <select id="category" value={budget.category} onChange={handleSelect}>
+          <option>Select Category</option>
+          <option id="category" value="Income">Income</option>
+          <option id="category" value="Expenditure">Expenditure</option>
+          {/* <option>Savings</option> */}
+          {/* <option></option> */}
+        </select>
+        <br />
         <input type="submit" value=" UPDATE TRANSACTION " />
 
       </form>
-      <Link to={`budgets/new${index}`}>
+      {/* <Link to={`budgets/new${index}`}>
         <button>CREATE NEW ITEM</button>
-      </Link>
+      </Link> */}
 
     </div>
   )

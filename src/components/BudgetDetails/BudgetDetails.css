@@ -1,0 +1,14 @@
+.details {
+    text-align: center;
+    height: 67vh;
+
+}
+.div-btn {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+}
+.btn{
+    padding: 10px;
+    border-radius: 5px;
+}

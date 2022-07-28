@@ -28,6 +28,10 @@ const NewBudget = () => {
     setBudget({ ...budget, [e.target.id] : e.target.value })
   };
 
+  const handleSelect = (e) => {
+    setBudget({...budget, [e.target.id] : e.target.value})
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     addNewBudget();
@@ -42,7 +46,7 @@ const NewBudget = () => {
           <br />
           <input 
           id='date' 
-          type="text" 
+          type="date" 
           placeholder="Date" 
           value={budget.date}
           onChange={handleChange}
@@ -85,8 +89,17 @@ const NewBudget = () => {
           />
         </label>
         <br />
+
+        <select id="category" value={budget.category} onChange={handleSelect}>
+          <option>Select Category</option>
+          <option id="category" value="Income">Income</option>
+          <option id="category" value="Expenditure">Expenditure</option>
+          {/* <option>Savings</option> */}
+          {/* <option></option> */}
+        </select>
+        <br />
         <div>
-        <input type="submit" value=" CREATE NEW ITEM " />
+        <input type="submit" value="CREATE NEW ITEM" />
         </div>
 
       </form>

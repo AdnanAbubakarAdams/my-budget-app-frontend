@@ -25,7 +25,7 @@ const Budgets = () => {
     sum += amount;
     return sum;
   });
-  let figColor = "black";
+  let figColor = "";
   if (sum < 0) {
     figColor = "red";
   } else {
@@ -43,6 +43,7 @@ const Budgets = () => {
               <th>Date</th>
               <th>Transactions</th>
               <th>Amount</th>
+              <th>category</th>
               <th>From</th>
             </tr>
           </thead>

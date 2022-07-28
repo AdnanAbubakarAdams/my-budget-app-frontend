@@ -10,16 +10,16 @@ const Budget = ({ budget, index }) => {
           {budget.date} 
         </td>
         <td>
-          <a href=''>{budget.item_name}</a>
+          <Link to={`/budgets/${index}`}>{budget.item_name}</Link>
         </td>
         <td>
-          <a href=''>{budget.amount}</a>
+          <Link to={`/budgets/${index}`}>$ {budget.amount}</Link>
         </td>
         <td>
-          <a href=''>{budget.from}</a>
+          <Link to={`/budgets/${index}`}>{budget.category}</Link>
         </td>
         <td>
-          <Link to={`/budgets/${index}`}>✏️</Link>
+          <Link to={`/budgets/${index}`}>{budget.from}</Link>
         </td>
       </tr>
   
