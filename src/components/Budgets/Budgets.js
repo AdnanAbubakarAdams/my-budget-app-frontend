@@ -43,7 +43,7 @@ const Budgets = () => {
               <th>Date</th>
               <th>Transactions</th>
               <th>Amount</th>
-              <th>category</th>
+              <th>Category</th>
               <th>From</th>
             </tr>
           </thead>

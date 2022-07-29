@@ -50,6 +50,7 @@ const NewBudget = () => {
           placeholder="Date" 
           value={budget.date}
           onChange={handleChange}
+          className="date"
           />
         </label>
         <br />

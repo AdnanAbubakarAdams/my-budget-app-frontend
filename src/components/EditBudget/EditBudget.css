@@ -1,0 +1,21 @@
+.Edit-Budget {
+    text-align: center;
+    height: 1090px;
+    /* background-image: url("../images/pieChart.png"); */
+    /* background-repeat: no-repeat; */
+    /* opacity: 0.5; */
+}
+
+.Edit-Budget form select {
+    margin: 7px;
+    padding: 5px;
+    width: 200px;
+}
+/* input[type="submit"] {
+    padding: 15px;
+    margin: 17px;
+
+} */
+/* .edit-btn {
+    padding: 20px;
+} */

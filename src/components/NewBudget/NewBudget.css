@@ -1,6 +1,6 @@
 .New-Budget {
     background-image: url("../images/budget.png");
-    height: 70vh;
+    height: 90vh;
     text-align: center;
     /* background-repeat: ; */
 }
@@ -42,6 +42,13 @@ input[type="number"] {
 input[type="submit"] {
     margin: 0;
     width: 150px;
-    padding: 5px;
+    padding: 10px;
     border-radius: 5px;
+    /* background: #4895ef; */
+    /* color: white; */
 }
+/* .date {
+    margin: 0;
+    width: 300px;
+    padding: 5px;
+} */
