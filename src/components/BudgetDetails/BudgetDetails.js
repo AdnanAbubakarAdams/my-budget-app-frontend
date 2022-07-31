@@ -18,8 +18,8 @@ const BudgetDetails = () => {
         setBudget(res.data);
       })
       .catch((error) => {
-        // console.log(error)
-        navigate(`404`);
+        console.log(error)
+        // navigate(`404`);
       });
   }, [index]);
 
@@ -50,20 +50,20 @@ const BudgetDetails = () => {
       </article>
       <div className="div-btn">
         <div>
-          <button className="btn" onClick={handleGoBack}>GO BACK</button>
+          <button className="btn1" onClick={handleGoBack}>GO BACK</button>
         </div>
         <div>
-          <button className="btn" onClick={handleDelete}>DELETE</button>
+          <button className="btn2" onClick={handleDelete}>DELETE</button>
         </div>
 
         <div>
           <Link to={`/budgets/${index}/edit`}>
-            <button className="btn">EDIT</button>
+            <button className="btn3">EDIT</button>
           </Link>
         </div>
         <div>
           <Link to={`/budgets/new`}>
-            <button className="btn"> CREATE NEW TRANSACTION </button>
+            <button className="btn4"> CREATE NEW TRANSACTION </button>
           </Link>
         </div>
       </div>

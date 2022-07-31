@@ -15,7 +15,10 @@
 .New-Budget form {
     margin: auto;
     width: 50%;
+    height: 50%;
     border: 1px solid;
+    background-image: url("../images/form.png");
+    background-repeat: round;
     padding-top: 5px;
     padding-bottom: 10px;
 }

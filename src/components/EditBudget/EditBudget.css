@@ -1,6 +1,7 @@
 .Edit-Budget {
     text-align: center;
-    height: 1090px;
+    height: 70vh;
+    background-color: #ffbe0b;
     /* background-image: url("../images/pieChart.png"); */
     /* background-repeat: no-repeat; */
     /* opacity: 0.5; */
@@ -10,12 +11,15 @@
     margin: 7px;
     padding: 5px;
     width: 200px;
+    /* background-color: #eae2b7; */
 }
-/* input[type="submit"] {
+input[type="submit"] {
     padding: 15px;
     margin: 17px;
+    background-color: black;
+    color: white;
 
-} */
+}
 /* .edit-btn {
     padding: 20px;
 } */

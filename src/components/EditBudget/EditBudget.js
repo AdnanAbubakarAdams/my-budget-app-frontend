@@ -33,7 +33,7 @@ const EditBudget = () => {
       setBudget(res.data)
     })
     .catch((err) => console.log(err))
-  },[])
+  },[index])
 
   const updateBudget = () => {
     axios.put(`${API}/budgets/${index}`, budget)
@@ -112,7 +112,7 @@ const EditBudget = () => {
           {/* <option></option> */}
         </select>
         <br />
-        <input  type="submit" value="UPDATE TRANSACTION" />
+        <input type="submit" value="UPDATE TRANSACTION" />
 
       </form>
       {/* <Link to={`budgets/new${index}`}>
